@@ -16,17 +16,17 @@
 		<div class="container">
             <h2 class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
             <div class='description'>
-    			<p>Tere bhai ki Machine Learning App.</p>
+    			<p>Note: I am not a doctor and this webapp is made just for testing ML skills.</p>
     		</div>
     	</div>
 
 		<!-- Result -->
 		<div class="results">
 			{% if prediction==1 %}
-				<h1>Prediction: <span class='danger'>Bencho! Meetha kam kha,Diabetes hai tujhe.</span></h1>
+				<h1>Prediction: <span class='danger'>So Sorry! Patient has Diabetes.</span></h1>
 				<img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image">
 			{% elif prediction==0 %}
-				<h1>Prediction: <span class='safe'>Great! Bencho party,koi diabetes nhi hai tujhe.</span></h1>
+				<h1>Prediction: <span class='safe'>Congratulation! Patient has no Diabetes.</span></h1>
 				<img class="gif1" src="{{ url_for('static', filename='no-diabetes.webp') }}" alt="Not Diabetes Image">
 			{% endif %}
 		</div>
